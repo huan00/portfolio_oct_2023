@@ -67,4 +67,3 @@ const Works = ({ proRef }: Props) => {
 }
 
 export default Works
-// background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(38,51,97,1) 0%, rgba(65,143,222,1) 79% );
