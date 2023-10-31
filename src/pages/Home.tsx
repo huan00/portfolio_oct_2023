@@ -7,6 +7,7 @@ const Home = () => {
   const viewRef = useRef<HTMLParagraphElement>(null)
   const aboutRef = useRef<HTMLDivElement>(null)
   const contactRef = useRef<HTMLDivElement>(null)
+  const projectRef = useRef<HTMLDivElement>(null)
 
   // console.log(viewRef.current)
   const buttonAnimation = () => {
@@ -26,9 +27,9 @@ const Home = () => {
     }
   }
 
-  const scrollToContact = () => {
-    if (contactRef.current) {
-      contactRef.current.scrollIntoView({ behavior: 'smooth' })
+  const scrollToContact = (ref: React.RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
@@ -38,9 +39,17 @@ const Home = () => {
         <nav className="flex justify-between items-center">
           <div className="font-bold text-5xl">H</div>
           <div className="flex list-none">
-            <li className="ml-10">Project</li>
+            <li
+              className="ml-10 cursor-pointer"
+              onClick={() => scrollToContact(projectRef)}
+            >
+              Project
+            </li>
             <li className="ml-10">Resume</li>
-            <li className="ml-10 cursor-pointer" onClick={scrollToContact}>
+            <li
+              className="ml-10 cursor-pointer"
+              onClick={() => scrollToContact(contactRef)}
+            >
               Contact
             </li>
           </div>
@@ -62,8 +71,11 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <About aboutRef={aboutRef} scrollToContact={scrollToContact} />
-      <Works />
+      <About
+        aboutRef={aboutRef}
+        scrollToContact={() => scrollToContact(contactRef)}
+      />
+      <Works proRef={projectRef} />
       <Contact contactRef={contactRef} />
     </>
   )

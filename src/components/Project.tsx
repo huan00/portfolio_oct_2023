@@ -19,9 +19,12 @@ const Project = ({ project }: Props) => {
             className="w-full object-cover"
           />
         </div>
-        <div className="flex flex-1 gap-2">
+        <div className="flex flex-1 gap-2 flex-wrap">
           {project.tech.map((tech) => (
-            <p className="w-fit py-1 px-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500">
+            <p
+              key={Math.random() + tech}
+              className="w-fit py-1 px-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500"
+            >
               {tech}
             </p>
           ))}
@@ -31,7 +34,7 @@ const Project = ({ project }: Props) => {
         <p className="text-xl font-black">{project.title}</p>
         <p>{project.description}</p>
         <p>
-          <span className="font-bold">Full development</span>{' '}
+          <span className="font-bold">{project.devType}</span>
           {project.development}
         </p>
       </div>
