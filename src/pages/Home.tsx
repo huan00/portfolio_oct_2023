@@ -73,15 +73,15 @@ const Home = () => {
           </div>
         </nav>
         <div className="flex flex-col items-center relative top-1/3 self-center text-center">
-          <p className="text-5xl leading-loose ">
+          <p className="text-xl sm:text-5xl leading-loose ">
             Hello, I'm <span>Huan Zeng</span>
           </p>
-          <p className="text-4xl leading-loose">
+          <p className="text-xl sm:text-4xl leading-loose">
             I'm a full-stack web developer<span>.</span>
           </p>
           <p
             ref={viewRef}
-            className="flex w-fit justify-center items-center text-3xl border-t border-l px-2 transition-all cursor-pointer"
+            className="flex w-fit justify-center items-center text-2xl relative top-24 sm:top-4 sm:text-3xl border-t border-l px-2 transition-all cursor-pointer"
             style={{ boxShadow: '5px 5px 5px red' }}
             onClick={buttonAnimation}
           >
