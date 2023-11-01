@@ -10,37 +10,42 @@ const MySkills = ({ aboutRef, scrollToContact }: Props) => {
   return (
     <div
       ref={aboutRef}
-      className="w-screen h-screen bg-[#189AB4] p-20 flex flex-col relative"
+      className="w-screen h-screen bg-[#189AB4] py-10 px-4 sm:p-20 flex flex-col relative"
     >
-      <div className="w-full flex justify-center">
-        <div className="flex flex-col w-2/3 justify-center items-center">
-          <p className="text-4xl font-bold">About Me</p>
+      <div className="w-full flex justify-center ">
+        <div className="flex flex-col sm:w-2/3 justify-center items-center">
+          <p className="text-lg sm:text-4xl font-bold">About Me</p>
           <p>-------------------------</p>
-          <p className="text-center leading-10">
+          <p className="sm:text-center leading-6 sm:leading-10">
             Learn more about me! My current skills in development and the tools
             I am knowledgeable with and my past work experiences.
           </p>
         </div>
       </div>
-      <div className="flex pt-20 gap-10">
-        <div className="flex flex-col flex-1 gap-5">
+      <div
+        className="flex flex-col-reverse mt-5 py-2 px-2 bg-black bg-opacity-50 rounded-lg 
+                          sm:flex-row sm:pt-20 sm:mt-0 sm:bg-transparent gap-10"
+      >
+        <div className="flex flex-col flex-1 gap-3 sm:gap-5">
           <div>
-            <p className="text-2xl font-bold">Me Now, Passion and Past</p>
+            <p className="sm:text-2xl font-bold">Me Now, Passion and Past</p>
           </div>
-          <div className="flex flex-col gap-4">
-            <p className="leading-7">
-              <span>Now - </span>I am a full stack web developer building web
-              applications and React Native apps. Freelancing and working on
-              personal projects. Check out my projects to learn more.
+          <div className="flex flex-col gap-2 sm:gap-4">
+            <p className="leading-5 sm:leading-7">
+              <span className="font-bold">Now - </span>I am a full stack web
+              developer building web applications and React Native apps.
+              Freelancing and working on personal projects. Check out my
+              projects to learn more.
             </p>
-            <p className="leading-7">
-              <span>Past - </span>My 10+ years in sales and territory
-              management, using software to track and complete daily tasks,
-              sparked my passion for software engineering.
+            <p className="leading-5 sm:leading-7">
+              <span className="font-bold">Past - </span>My 10+ years in sales
+              and territory management, using software to track and complete
+              daily tasks, sparked my passion for software engineering.
             </p>
-            <p className="leading-7">
-              <span>Passion - </span> I am passionate on creating tools base on
-              feedback from the field and enhance their daily task.
+            <p className="leading-5 sm:leading-7">
+              <span className="font-bold">Passion - </span> I am passionate on
+              creating tools base on feedback from the field and enhance their
+              daily task.
             </p>
           </div>
         </div>
@@ -67,7 +72,7 @@ const MySkills = ({ aboutRef, scrollToContact }: Props) => {
                 ))}
               </div>
             </div>
-            <div className="w-full ">
+            <div className="w-full mt-2 sm:mt-4 ">
               <p className="text-base text-center">
                 My frontend development tools for building and maintaining
                 user-facing web applications.
@@ -77,7 +82,7 @@ const MySkills = ({ aboutRef, scrollToContact }: Props) => {
 
           <div className="flex flex-col justify-center items-center">
             <div className="flex w-full items-center">
-              <div className="flex w-fit">
+              <div className="flex w-fit h-fit">
                 <p>Back-end</p>
               </div>
               <div className="flex flex-1 w-full justify-around overflow-hidden">
@@ -88,7 +93,7 @@ const MySkills = ({ aboutRef, scrollToContact }: Props) => {
                 ))}
               </div>
             </div>
-            <div className="w-full mt-4">
+            <div className="w-full mt-2 sm:mt-4">
               <p className="text-base text-center">
                 My backend development tools in building, maintaining scalable
                 database and secure APIs.
@@ -97,7 +102,7 @@ const MySkills = ({ aboutRef, scrollToContact }: Props) => {
           </div>
         </div>
       </div>
-      <div className="h-1/5 mt-20 w-full relative bottom-0">
+      <div className="h-1/5 flex items-center justify-end sm:justify-start mt-20 w-full relative bottom-0">
         <div
           className="w-fit px-10 py-2 rounded bg-[#007EA7] cursor-pointer animate-bounce"
           onClick={scrollToContact}
