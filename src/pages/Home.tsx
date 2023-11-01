@@ -37,7 +37,7 @@ const Home = () => {
     <>
       <div className="flex flex-col w-screen h-screen bg-[#05445E] p-4">
         <nav className="flex justify-between items-center">
-          <div className="font-bold text-5xl">H</div>
+          <div className="font-bold text-5xl animate-pulse">H</div>
           <div className="flex list-none">
             <li
               className="ml-10 cursor-pointer"
@@ -45,7 +45,7 @@ const Home = () => {
             >
               Project
             </li>
-            <li className="ml-10">Resume</li>
+            <li className="ml-10 cursor-pointer">Resume</li>
             <li
               className="ml-10 cursor-pointer"
               onClick={() => scrollToContact(contactRef)}
