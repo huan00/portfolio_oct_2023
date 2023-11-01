@@ -26,13 +26,15 @@ const Works = ({ proRef }: Props) => {
         <div className="w-full h-full  rounded-2xl relative " ref={projectRef}>
           {PROJECTS.map((project) => (
             <div
-              className={`w-full h-full absolute ${
-                activeProject === project.title && 'animate-fly-in'
+              className={`w-full h-full absolute z-10 ${
+                activeProject === project.title
+                  ? 'animate-fly-in'
+                  : 'animate-fly-out'
               }
               `}
               key={Math.random()}
             >
-              {activeProject === project.title && <Project project={project} />}
+              {<Project project={project} />}
             </div>
           ))}
         </div>

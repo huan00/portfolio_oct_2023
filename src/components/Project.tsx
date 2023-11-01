@@ -11,8 +11,7 @@ const Project = ({ project }: Props) => {
   }
   return (
     <div
-      className={`w-full flex flex-col rounded-xl p-4 shadow-2xl bg-gradient-to-br from-[#263361] to-[#418fde] relative gap-2 
-      `}
+      className={`w-full flex flex-col rounded-xl p-4 shadow-2xl bg-gradient-to-br from-[#263361] to-[#418fde] relative gap-2 z-10`}
     >
       <div className="w-full flex flex-col gap-2 ">
         <div className="w-full aspect-[2/1] rounded-xl overflow-hidden">
@@ -26,7 +25,7 @@ const Project = ({ project }: Props) => {
           {project.tech.map((tech) => (
             <p
               key={Math.random() + tech}
-              className="w-fit py-1 px-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500"
+              className="w-fit py-1 px-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 animate-pulse"
             >
               {tech}
             </p>
@@ -41,7 +40,7 @@ const Project = ({ project }: Props) => {
           {project.development}
         </p>
       </div>
-      <div className="w-2/5 relative mt-5">
+      <div className="w-2/5 relative mt-5 hover:scale-110">
         <CustomBtn title={'visit'} onClick={visitWebsite} />
       </div>
     </div>

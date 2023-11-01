@@ -32,7 +32,9 @@ export default {
           },
           '100%': {
             transform: 'translateY(100%)',
-            opacity: '0'
+            zIndex: '-10',
+            opacity: '0',
+            display: 'none'
           }
         },
         plane: {

@@ -99,7 +99,7 @@ const MySkills = ({ aboutRef, scrollToContact }: Props) => {
       </div>
       <div className="h-1/5 mt-20 w-full relative bottom-0">
         <div
-          className="w-fit px-10 py-2 rounded bg-[#007EA7] cursor-pointer"
+          className="w-fit px-10 py-2 rounded bg-[#007EA7] cursor-pointer animate-bounce"
           onClick={scrollToContact}
         >
           <p className="font-bold ">Contact</p>
