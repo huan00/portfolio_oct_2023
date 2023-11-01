@@ -19,13 +19,13 @@ const Works = ({ proRef }: Props) => {
   return (
     <div
       ref={proRef}
-      className="w-screen h-screen flex justify-center items-center bg-[#007EA7]  p-20 gap-10"
+      className="w-screen h-screen flex flex-col-reverse sm:flex-row justify-center items-center bg-[#007EA7] px-4 py-10 sm:p-20 gap-10"
     >
       <div className="flex flex-1 h-2/3 w-full justify-center items-center">
-        <div className="w-full h-full  rounded-2xl relative ">
+        <div className="w-full h-full rounded-2xl relative ">
           {PROJECTS.map((project, index) => (
             <div
-              className={`w-full h-full absolute z-10 opacity-0 ${
+              className={`w-full h-fit absolute opacity-0 ${
                 activeProject === project.title && 'animate-fly-in'
               }
               ${inView && index === 0 && 'animate-fly-in'}
@@ -38,22 +38,22 @@ const Works = ({ proRef }: Props) => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col flex-1 h-1/2 justify-start">
-        <div className="flex justify-between">
-          <p className="text-5xl" ref={ref}>
+      <div className="flex flex-col sm:flex-1 w-full sm:h-1/2 justify-start">
+        <div className="flex items-center justify-between">
+          <p className="text-lg sm:text-5xl" ref={ref}>
             Works
           </p>
-          <p className="text-5xl">{PROJECTS.length}</p>
+          <p className="text-lg sm:text-5xl">{PROJECTS.length}</p>
         </div>
-        <div className=" flex flex-col">
+        <div className=" flex flex-col w-full ">
           {PROJECTS.map((project) => (
             <div key={Math.random()}>
               <div
                 className="flex justify-between items-end mt-5 px-2 hover:bg-slate-300 hover:rounded-md cursor-grab"
                 onMouseEnter={() => hoverProject(project)}
               >
-                <p className="text-xl">{project.title}</p>
-                <p className="text-xl">{project.work}</p>
+                <p className="text-base sm:text-xl">{project.title}</p>
+                <p className="text-base sm:text-xl">{project.work}</p>
               </div>
               <hr />
             </div>

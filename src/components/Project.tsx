@@ -40,7 +40,7 @@ const Project = ({ project }: Props) => {
           {project.development}
         </p>
       </div>
-      <div className="w-2/5 relative mt-5 hover:scale-110">
+      <div className="flex self-end w-2/5 sm:self-start relative mt-5 hover:scale-110">
         <CustomBtn title={'visit'} onClick={visitWebsite} />
       </div>
     </div>

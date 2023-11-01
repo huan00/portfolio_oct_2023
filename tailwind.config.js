@@ -24,7 +24,8 @@ export default {
           },
           '100%': {
             transform: 'translateX(0%)',
-            opacity: '1'
+            opacity: '1',
+            zIndex: '10'
           }
         },
         'fly-out': {
