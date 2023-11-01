@@ -59,14 +59,14 @@ const Contact = ({ contactRef }: Props) => {
 
   return (
     <div
-      className="w-screen h-screen flex flex-col justify-between p-40 bg-[#738FA7]"
+      className="w-screen h-screen flex flex-col justify-between pt-10 md:p-40 bg-[#738FA7]"
       ref={contactRef}
     >
       <div className="w-full flex flex-col items-center">
-        <p className="text-5xl">let's connect</p>
+        <p className="text-2xl md:text-5xl">let's connect</p>
         <p className="text-4xl">------------------</p>
       </div>
-      <div className="flex w-full h-full gap-4 ">
+      <div className="flex flex-col md:flex-row w-full h-full gap-4 ">
         <div className="flex flex-col flex-1 h-full w-full justify-center items-center">
           <div className="flex flex-col">
             <div
@@ -84,18 +84,20 @@ const Contact = ({ contactRef }: Props) => {
                 onClick={handleCopy}
               />
             </div>
-            <div className="w-full aspect-square flex justify-center items-center">
+            <div className="w-1/2 self-center md:w-full aspect-square flex justify-center items-center">
               <img
                 src={plane}
                 alt=""
-                className={`w-11/12 object-fit ${inView && 'animate-plane'}`}
+                className={`w-4/5 md:w-11/12 object-fit ${
+                  inView && 'animate-plane'
+                }`}
               />
             </div>
           </div>
         </div>
 
         {/* vertical line */}
-        <div className="border-r h-2/3 flex justify-center items-center relative top-1/2 -translate-y-1/2" />
+        <div className="hidden md:flex border-r h-2/3 justify-center items-center relative top-1/2 -translate-y-1/2" />
 
         {/* <div className="flex flex-1 h-full w-full justify-center items-center">
           <form

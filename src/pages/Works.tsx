@@ -19,7 +19,7 @@ const Works = ({ proRef }: Props) => {
   return (
     <div
       ref={proRef}
-      className="w-screen h-screen flex flex-col-reverse sm:flex-row justify-center items-center bg-[#007EA7] px-4 py-10 sm:p-20 gap-10"
+      className="w-screen h-screen flex flex-col-reverse md:flex-row justify-center items-center bg-[#007EA7] px-4 py-10 md:p-20 gap-10"
     >
       <div className="flex flex-1 h-2/3 w-full justify-center items-center">
         <div className="w-full h-full rounded-2xl relative ">
@@ -38,12 +38,12 @@ const Works = ({ proRef }: Props) => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col sm:flex-1 w-full sm:h-1/2 justify-start">
+      <div className="flex flex-col md:flex-1 w-full md:h-1/2 justify-start">
         <div className="flex items-center justify-between">
-          <p className="text-lg sm:text-5xl" ref={ref}>
+          <p className="text-lg md:text-5xl" ref={ref}>
             Works
           </p>
-          <p className="text-lg sm:text-5xl">{PROJECTS.length}</p>
+          <p className="text-lg md:text-5xl">{PROJECTS.length}</p>
         </div>
         <div className=" flex flex-col w-full ">
           {PROJECTS.map((project) => (
@@ -52,8 +52,8 @@ const Works = ({ proRef }: Props) => {
                 className="flex justify-between items-end mt-5 px-2 hover:bg-slate-300 hover:rounded-md cursor-grab"
                 onMouseEnter={() => hoverProject(project)}
               >
-                <p className="text-base sm:text-xl">{project.title}</p>
-                <p className="text-base sm:text-xl">{project.work}</p>
+                <p className="text-base md:text-xl">{project.title}</p>
+                <p className="text-base md:text-xl">{project.work}</p>
               </div>
               <hr />
             </div>
