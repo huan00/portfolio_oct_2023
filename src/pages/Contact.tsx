@@ -1,8 +1,7 @@
 import plane from '../assets/sendplane.png'
 import copy from '../assets/copy.png'
-import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { useState } from 'react'
-// import axios from 'axios'
+import { useInView } from 'react-intersection-observer'
 
 interface Props {
   contactRef: React.RefObject<HTMLDivElement>
@@ -15,13 +14,16 @@ interface Props {
 // }
 
 const Contact = ({ contactRef }: Props) => {
+  const { ref, inView } = useInView()
   const [isCopy, setIsCopy] = useState<boolean>(false)
   const handleCopy = () => {
+    navigator.clipboard.writeText('hello@huan-zeng.com')
     setIsCopy(true)
     setTimeout(() => {
       setIsCopy(false)
     }, 200)
   }
+
   // const [formData, setFormData] = useState<FromType>({
   //   name: '',
   //   email: '',
@@ -64,24 +66,30 @@ const Contact = ({ contactRef }: Props) => {
         <p className="text-5xl">let's connect</p>
         <p className="text-4xl">------------------</p>
       </div>
-      <div className="flex w-full h-full gap-2 ">
+      <div className="flex w-full h-full gap-4 ">
         <div className="flex flex-col flex-1 h-full w-full justify-center items-center">
-          <div>
-            <div className="flex justify-center w-full h-8 overflow-hidden">
+          <div className="flex flex-col">
+            <div
+              className="flex justify-center w-full h-8 overflow-hidden"
+              ref={ref}
+            >
               <p className="shadow-xl text-lg">E-mail: hello@huan-zeng.com</p>
-              <CopyToClipboard text="hello@huan-zeng.com">
-                <img
-                  src={copy}
-                  alt=""
-                  className={`object-fit cursor-pointer ${
-                    isCopy ? 'scale-125' : 'scale-100'
-                  }`}
-                  onClick={handleCopy}
-                />
-              </CopyToClipboard>
+
+              <img
+                src={copy}
+                alt=""
+                className={`object-fit cursor-pointer ${
+                  isCopy ? 'scale-125' : 'scale-100'
+                }`}
+                onClick={handleCopy}
+              />
             </div>
             <div className="w-full aspect-square flex justify-center items-center">
-              <img src={plane} alt="" className="object-fit animate-plane" />
+              <img
+                src={plane}
+                alt=""
+                className={`w-11/12 object-fit ${inView && 'animate-plane'}`}
+              />
             </div>
           </div>
         </div>

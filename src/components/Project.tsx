@@ -10,7 +10,10 @@ const Project = ({ project }: Props) => {
     window.open(`${project.website}`, '_blank')
   }
   return (
-    <div className="w-full flex flex-col rounded-xl p-4 shadow-2xl relative gap-2 ">
+    <div
+      className={`w-full flex flex-col rounded-xl p-4 shadow-2xl bg-gradient-to-br from-[#263361] to-[#418fde] relative gap-2 
+      `}
+    >
       <div className="w-full flex flex-col gap-2 ">
         <div className="w-full aspect-[2/1] rounded-xl overflow-hidden">
           <img
