@@ -62,7 +62,16 @@ const Home = () => {
               >
                 Project
               </li>
-              <li className="ml-10 cursor-pointer">Resume</li>
+              <li className="ml-10 cursor-pointer">
+                <a
+                  className="app__desc--link__text"
+                  href="https://drive.google.com/file/d/1DnxRoezAB5cX0cqDEraztJ1bIBmD5KJA/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Resume
+                </a>
+              </li>
               <li
                 className="ml-10 cursor-pointer"
                 onClick={() => scrollToContact(contactRef)}
