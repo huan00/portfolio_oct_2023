@@ -12,7 +12,7 @@ export const PROJECTS = [
       "Freelance opportunity to revamp a recruitment agency's website with updated branding and messaging.",
     devType: 'Web development: ',
     development:
-      'Full development frontend development with react native and backend with Nodejs, socket.io and create the game logic.',
+      'Frontend development with react native and backend with Nodejs, socket.io and create the game logic.',
     website: 'https://letsdevise.co'
   },
   {
@@ -28,10 +28,10 @@ export const PROJECTS = [
       'googleAdmob'
     ],
     description:
-      'One of my favorite childhood card game. Development this to reminisce my childhood and play with friends.',
+      'One of my favorite childhood card games, I developed this to reminisce about my childhood and play with friends.',
     devType: 'Full stack development: ',
     development:
-      'React native for frontend development, and backend with Node.js for game logic, and socket.io for multi-player server communication.',
+      'React native for frontend development, and backend developed with Node.js for game logic, and socket.io for multi-player server communication.',
     website: 'https://apps.apple.com/us/app/13-with-friends/id6447323987'
   },
   {
@@ -49,7 +49,7 @@ export const PROJECTS = [
       'Develop an AI-powered clothing recommendation app to help people choose the right clothes for the weather.',
     devType: 'Full stack development: ',
     development:
-      'React typescript with tailwind for frontend. Backend developed with django-rest framework along with OpenAI for data generation.',
+      'React typescript with Tailwind for frontend development. Backend developed with django-rest framework along with OpenAI for data generation.',
     website: 'https://warm-weather.netlify.app'
   }
 ]
