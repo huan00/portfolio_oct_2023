@@ -1,13 +1,15 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import About from './About'
 import Works from './Works'
 import Contact from './Contact'
+import menuIcon from '../assets/menu.png'
 
 const Home = () => {
   const viewRef = useRef<HTMLParagraphElement>(null)
   const aboutRef = useRef<HTMLDivElement>(null)
   const contactRef = useRef<HTMLDivElement>(null)
   const projectRef = useRef<HTMLDivElement>(null)
+  const [showMenu, setShowMenu] = useState<boolean>(false)
 
   // console.log(viewRef.current)
   const buttonAnimation = () => {
@@ -33,25 +35,41 @@ const Home = () => {
     }
   }
 
+  const renderMenu = () => {
+    setShowMenu((prev) => !prev)
+  }
+
   return (
-    <>
+    <div>
       <div className="flex flex-col w-screen h-screen bg-[#05445E] p-4">
-        <nav className="flex justify-between items-center">
-          <div className="font-bold text-5xl animate-pulse">H</div>
-          <div className="flex list-none">
-            <li
-              className="ml-10 cursor-pointer"
-              onClick={() => scrollToContact(projectRef)}
+        <nav className="flex h-12 justify-between items-center relative">
+          <div className="w-full h-full flex  md:justify-start font-bold text-5xl animate-pulse">
+            <p>H</p>
+          </div>
+          <div className="h-full flex items-end flex-col sm:items-center sm:just">
+            <div className="sm:hidden w-12 h-12" onClick={renderMenu}>
+              <img src={menuIcon} alt="" className="w-12 h-12" />
+            </div>
+            <div
+              className={`${
+                showMenu ? 'flex' : 'hidden'
+              } flex-col bg-[black] opacity-50  right-0 -bottom-[140%] px-4 py-6 gap-4 rounded-2xl
+                          sm:right-0 sm:bottom-0 sm:relative sm:flex sm:flex-row sm:px-0 sm:py-0 sm:gap-0 sm:justify-center sm:bg-opacity-0 list-none`}
             >
-              Project
-            </li>
-            <li className="ml-10 cursor-pointer">Resume</li>
-            <li
-              className="ml-10 cursor-pointer"
-              onClick={() => scrollToContact(contactRef)}
-            >
-              Contact
-            </li>
+              <li
+                className="ml-10 cursor-pointer"
+                onClick={() => scrollToContact(projectRef)}
+              >
+                Project
+              </li>
+              <li className="ml-10 cursor-pointer">Resume</li>
+              <li
+                className="ml-10 cursor-pointer"
+                onClick={() => scrollToContact(contactRef)}
+              >
+                Contact
+              </li>
+            </div>
           </div>
         </nav>
         <div className="flex flex-col items-center relative top-1/3 self-center text-center">
@@ -77,7 +95,7 @@ const Home = () => {
       />
       <Works proRef={projectRef} />
       <Contact contactRef={contactRef} />
-    </>
+    </div>
   )
 }
 
