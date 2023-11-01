@@ -10,7 +10,7 @@ const MySkills = ({ aboutRef, scrollToContact }: Props) => {
   return (
     <div
       ref={aboutRef}
-      className="w-screen h-screen bg-[#189AB4] py-10 px-4 sm:p-20 flex flex-col relative"
+      className="w-screen h-screen bg-[#189AB4] py-10 px-4 md:py-20 flex flex-col relative"
     >
       <div className="w-full flex justify-center ">
         <div className="flex flex-col sm:w-2/3 justify-center items-center">
@@ -18,13 +18,13 @@ const MySkills = ({ aboutRef, scrollToContact }: Props) => {
           <p>-------------------------</p>
           <p className="sm:text-center leading-6 sm:leading-10">
             Learn more about me! My current skills in development and the tools
-            I am knowledgeable with and my past work experiences.
+            I use.
           </p>
         </div>
       </div>
       <div
         className="flex flex-col-reverse mt-5 py-2 px-2 bg-black bg-opacity-50 rounded-lg 
-                          sm:flex-row sm:pt-20 sm:mt-0 sm:bg-transparent gap-10"
+                          md:flex-row md:pt-20 md:mt-0 md:bg-transparent gap-10"
       >
         <div className="flex flex-col flex-1 gap-3 sm:gap-5">
           <div>
@@ -34,8 +34,8 @@ const MySkills = ({ aboutRef, scrollToContact }: Props) => {
             <p className="leading-5 sm:leading-7">
               <span className="font-bold">Now - </span>I am a full stack web
               developer building web applications and React Native apps.
-              Freelancing and working on personal projects. Check out my
-              projects to learn more.
+              Currently, freelanceing and working on personal projects. Check
+              out my projects to learn more.
             </p>
             <p className="leading-5 sm:leading-7">
               <span className="font-bold">Past - </span>My 10+ years in sales
@@ -43,9 +43,9 @@ const MySkills = ({ aboutRef, scrollToContact }: Props) => {
               daily tasks, sparked my passion for software engineering.
             </p>
             <p className="leading-5 sm:leading-7">
-              <span className="font-bold">Passion - </span> I am passionate on
-              creating tools base on feedback from the field and enhance their
-              daily task.
+              <span className="font-bold">Passion - </span> I am passionate
+              about creating tools based on user feedback to enhance their daily
+              tasks.
             </p>
           </div>
         </div>
@@ -102,7 +102,7 @@ const MySkills = ({ aboutRef, scrollToContact }: Props) => {
           </div>
         </div>
       </div>
-      <div className="h-1/5 flex items-center justify-end sm:justify-start mt-20 w-full relative bottom-0">
+      <div className="h-1/5 flex items-center justify-end md:justify-start mt-20 w-full relative bottom-0">
         <div
           className="w-fit px-10 py-2 rounded bg-[#007EA7] cursor-pointer animate-bounce"
           onClick={scrollToContact}
