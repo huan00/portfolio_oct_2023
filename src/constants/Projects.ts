@@ -1,6 +1,7 @@
 import warmWeatherImage from '../assets/projectImage/warmWeather.png'
 import deviseImage from '../assets/projectImage/letsDevise.png'
 import thirteenImage from '../assets/projectImage/thirteen.png'
+import otherdayImage from '../assets/projectImage/otherday.png'
 
 export const PROJECTS = [
   {
@@ -51,5 +52,17 @@ export const PROJECTS = [
     development:
       'React typescript with Tailwind for frontend development. Backend developed with django-rest framework along with OpenAI for data generation.',
     website: 'https://warm-weather.netlify.app'
+  },
+  {
+    title: 'Otherday fitness',
+    work: 'full stack development',
+    imgUrl: otherdayImage,
+    tech: ['react-native-typescript', 'open-ai', 'django-rest framework'],
+    description:
+      'Unleash your fitness potential with our AI-powered workout generator. Experience the convenience of having a fitness expert at your fingertips, anytime, anywhere.',
+    devType: 'Full stack development: ',
+    development:
+      'React-native typescript and style. Backend developed with django-rest framework along with OpenAI for data generation. \n Take a test run with: \n Username: demo@demo.com \n Password: demo',
+    website: 'https://otherday.netlify.app/'
   }
 ]
